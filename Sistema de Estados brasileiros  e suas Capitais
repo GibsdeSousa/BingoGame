@@ -1,0 +1,51 @@
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+public class MeusProjetos {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        // Mapeamento de estados para suas capitais
+        Map<String, String> capitais = new HashMap<>();
+        capitais.put("Acre", "Rio Branco");
+        capitais.put("Alagoas", "Maceió");
+        capitais.put("Amapá", "Macapá");
+        capitais.put("Amazonas", "Manaus");
+        capitais.put("Bahia", "Salvador");
+        capitais.put("Ceará", "Fortaleza");
+        capitais.put("Distrito Federal", "Brasília");
+        capitais.put("Espírito Santo", "Vitória");
+        capitais.put("Goiás", "Goiânia");
+        capitais.put("Maranhão", "São Luís");
+        capitais.put("Mato Grosso", "Cuiabá");
+        capitais.put("Mato Grosso do Sul", "Campo Grande");
+        capitais.put("Minas Gerais", "Belo Horizonte");
+        capitais.put("Pará", "Belém");
+        capitais.put("Paraíba", "João Pessoa");
+        capitais.put("Paraná", "Curitiba");
+        capitais.put("Pernambuco", "Recife");
+        capitais.put("Piauí", "Teresina");
+        capitais.put("Rio de Janeiro", "Rio de Janeiro");
+        capitais.put("Rio Grande do Norte", "Natal");
+        capitais.put("Rio Grande do Sul", "Porto Alegre");
+        capitais.put("Rondônia", "Porto Velho");
+        capitais.put("Roraima", "Boa Vista");
+        capitais.put("Santa Catarina", "Florianópolis");
+        capitais.put("São Paulo", "São Paulo");
+        capitais.put("Sergipe", "Aracaju");
+        capitais.put("Tocantins", "Palmas");
+        
+        System.out.print("Digite o nome de um Estado brasileiro: ");
+        String estado = sc.nextLine().trim();
+        
+        // Verifica se o estado está no mapa e exibe a capital correspondente
+        if (capitais.containsKey(estado)) {
+            System.out.println("A capital de " + estado + " é " + capitais.get(estado) + ".");
+        } else {
+            System.out.println("Estado não encontrado. Verifique a ortografia e tente novamente.");
+        }
+        
+        sc.close();
+    }
+}
